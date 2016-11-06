@@ -16,17 +16,18 @@
 		</table>
 		<div class="posts">
 			<script>
-				function Post(name, date, text)
+				function Post(name, date, text, profile_img_link)
 				{
 					document.write("<div class='posts'>");
 					 	document.write("<table><tr><td>");
+					 	document.write("<img style='width:50px;height:50px;' src='" + profile_img_link + "'/>")
 						document.write(name + "&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;" + date + "<br />");
 						document.write(text);
 						document.write("</td></tr></table>");
 					document.write("</div>");
 				}
 
-				Post("kek","6.11.16","TestPostaaaaa<br />testststtstpost");
+				Post("kek","6.11.16","TestPostaaaaa<br />testststtstpost", "http://happybirthday99.com/wp-content/uploads/2016/02/False-Age-Is-A-Word-Meme-For-Birthday.jpg");
 			</script>
 		</div>
 	</body>
