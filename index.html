@@ -14,21 +14,23 @@
 				<td><a href="about.html"><button id="btn-a">about</button></a></td>
 			</tr>
 		</table>
-		<div class="posts">
-			<script>
-				function Post(name, date, text)
-				{
-					document.write("<div class='posts'>");
-					 	document.write("<table><tr><td>");
-						document.write("<p id='name_date'><strong>" + name + "&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;" + date + "</strong><br /></p>");
-						document.write(text);
-						document.write("</td></tr></table>");
-					document.write("</div>");
-				}
-				
-				Post("kek", "7.11.16", "OverlapPostTest");
-				Post("kek","6.11.16","TestPostaaaaa<br />testststtstpost");
-			</script>
+		<div style="border:solid 1px black;">
+			<div class="posts">
+				<script>
+					function Post(name, date, text)
+					{
+						document.write("<div class='posts'>");
+							document.write("<table><tr><td>");
+							document.write("<p id='name_date'><strong>" + name + "&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;" + date + "</strong><br /></p>");
+							document.write(text);
+							document.write("</td></tr></table>");
+						document.write("</div>");
+					}
+
+					Post("kek", "7.11.16", "OverlapPostTest");
+					Post("kek","6.11.16","TestPostaaaaa<br />testststtstpost");
+				</script>
+			</div>
 		</div>
 	</body>
 </html>
