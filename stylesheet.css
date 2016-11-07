@@ -13,3 +13,8 @@ h1 {
 	border-color: black;
 	border-radius: 2px;
 }
+
+#name_date {
+	font-family: Verdana;
+	background-color: silver;
+}
