@@ -21,18 +21,19 @@
 					{
 						document.write("<div class='posts'>");
 							document.write("<table><tr><td>");
-							if (name == "kek") { name = "{SUPER_USER}" + name; }
-							if (name == "mutt") { name = "{ADMIN}" + name; }
+							if (name == "kek") { name = "{SUPER_USER} " + name; }
+							if (name == "mutt") { name = "{ADMIN} " + name; }
 							document.write("<p id='name_date'><strong><span style='border: solid 1px black;'>" + name + "&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;" + date + "</span></strong><br /></p>");
 							document.write("<span style='font-family:arial;'>" + text + "</span>");
 							document.write("</td></tr></table>");
 						document.write("</div>");
 					}
+					Post("kek",  "8.11.16", "<img src='http://img.ifcdn.com/images/510585c5218936de8e745364a3a6f99e1b7d744393dbd54260bdcc3f22a85528_1.jpg' />");
 					Post("mutt", "8.11.16", "<a href='http://stinkmut.itch.io/'>stinkmut.itch.io</a>");
-                                        Post("kek", "8.11.16", "Billy T likes spicey memes");
-					Post("kek", "7.11.16", "LONG POST TEST<br />LONG POST TEST<br />LONG POST TEST<br />LONG POST TEST<br />LONG POST TEST<br />LONG POST TEST<br />LONG POST TEST<br />LONG POST TEST<br />LONG POST TEST<br />LONG POST TEST<br />");
-					Post("kek", "7.11.16", "OverlapPostTest");
-					Post("kek","6.11.16","TestPostaaaaa<br />testststtstpost");
+                                        Post("kek",  "8.11.16", "Billy T likes spicey memes");
+					Post("kek",  "7.11.16", "LONG POST TEST<br />LONG POST TEST<br />LONG POST TEST<br />LONG POST TEST<br />LONG POST TEST<br />LONG POST TEST<br />LONG POST TEST<br />LONG POST TEST<br />LONG POST TEST<br />LONG POST TEST<br />");
+					Post("kek",  "7.11.16", "OverlapPostTest");
+					Post("kek",  "6.11.16", "TestPostaaaaa<br />testststtstpost");
 				</script>
 			</div>
 		</div>
