@@ -12,5 +12,6 @@ function Post(name, date, text)
   document.write("<p id='name_date'><strong><span style='border: solid 1px black;'>" + name + "&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;" + date + "</span></strong><br /></p>");
   document.write("<span style='font-family:arial;'>" + text + "</span>");
   document.write("</td></tr></table>");
-  document.write("</div>");console.log("created post by"+ name);
+  document.write("</div>");
+  console.log("created post by"+ name);
 }
