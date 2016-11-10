@@ -1,4 +1,5 @@
 var filtering = false;
+var postCount = 0;
 
 function Post(name, date, text)
 {
@@ -23,7 +24,8 @@ function Post(name, date, text)
   document.write("<span style='font-family:arial;'>" + text + "</span>");
   document.write("</td></tr></table>");
   document.write("</div>");
-  console.log("created post by"+ name);
+  postCount+=postCount;
+  console.log("created post by "+ name +" with id: " + postCount);
 }
 
 function findGetParameter(parameterName) {
