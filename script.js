@@ -21,9 +21,9 @@ function Post(name, date, text)
   if (text.split(" ")[0] == "[link]") { text = "<p style='border: solid 1px black;text-align:center;font-size:10px;'>[LINK POST]</p><a href='"+ text.split(" ")[1] + "'>" + text.split("/")[2] + "</a>"; }
   if (text.split(" ")[0] == "[YouTube]") { text = "<p style='border: solid 1px black;text-align:center;font-size:10px;'>[YouTube POST]</p><iframe width='560' height='315' src='"+ text.split(" ")[1] + "' frameborder='0'></iframe>"; }
   //if ((date.split(".")[0] == d.getDate()) && (date.split(".")[1] == d.getMonth()) && (date.split(".")[2] == d.getFullYear())) { date = "Today"; }
-  document.write("<p id='name_date'><strong><span style='border: solid 1px black;'>" + name + "&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;" + date + "</span></strong></p>");
-  document.write("<p><span style='font-family:arial;'>" + text + "</span></p>");
-  document.write("</td></tr></table>");
+  document.write("<p id='name_date'><strong><span style='border: solid 1px black;'>" + name + "&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;" + date + "</span></strong></p></td>");
+  document.write("<td><p><span style='font-family:arial;'>" + text + "</span></p></td>");
+  document.write("</tr></table>");
   document.write("</div>");
   console.log("created post by "+ name +" with id: " + postCount);
 }
