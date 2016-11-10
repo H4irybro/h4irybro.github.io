@@ -3,6 +3,12 @@
 	<head>
 		<title>critiqu.es</title>
 		<link rel="stylesheet" type="text/css" href="stylesheet.css">
+		<script>
+			function mailmemes()
+			{
+				window.location = "mailto:" + document.mail.text;
+			}
+		</script>
 	</head>
 	<body>
 		<table>
@@ -14,15 +20,10 @@
 				<td><a href="http://critiqu.es/about"><button id="btn-a">about</button></a></td>
 			</tr>
 		</table>
-		<table style="padding: 5px;">
-			<tr>
-				<td>
-					Email: <span style="border: solid 1px black;">coolio803@live.com</span>
-				</td>
-				<td>
-					<button onclick="window.open('mailto:coolio803@live.com');">Mail to me!</button>
-				</td>
-			</tr>
-		</table>
+		Email: <span style="border: solid 1px black;">coolio803@live.com</span>
+		<form name="mail">
+			<input name="text" type="text"/>
+			<input name="sub" type="submit" value="mail to me!" onclick="mailmemes();" />
+		</form>
 	</body>
 </html>
