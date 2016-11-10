@@ -3,7 +3,7 @@ function Post(name, date, text)
   //var d = Date();
   document.write("<div class='posts'>");
   document.write("<table><tr><td>");
-  console.log(parseURLParams(window.location));
+  console.log(findGetParameter("fuck"));
   if (name == "kek") { name = "{SUPER_USER} " + name; }
   if (name == "mutt") { name = "{ADMIN} " + name; }
   if (text.split(" ")[0] == "[img]") { text = "<p style='border: solid 1px black;text-align:center;font-size:10px;'>[IMAGE POST]</p><img style='width:200px;width:200px;' src='" + text.split(" ")[1] + "' />"; }
@@ -17,27 +17,13 @@ function Post(name, date, text)
   console.log("created post by"+ name);
 }
 
-function parseURLParams(url) {
-    var queryStart = url.indexOf("?") + 1,
-        queryEnd   = url.indexOf("#") + 1 || url.length + 1,
-        query = url.slice(queryStart, queryEnd - 1),
-        pairs = query.replace(/\+/g, " ").split("&"),
-        parms = {}, i, n, v, nv;
-
-    if (query === url || query === "") {
-        return;
+function findGetParameter(parameterName) {
+    var result = null,
+        tmp = [];
+    var items = location.search.substr(1).split("&");
+    for (var index = 0; index < items.length; index++) {
+        tmp = items[index].split("=");
+        if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
     }
-
-    for (i = 0; i < pairs.length; i++) {
-        nv = pairs[i].split("=");
-        n = decodeURIComponent(nv[0]);
-        v = decodeURIComponent(nv[1]);
-
-        if (!parms.hasOwnProperty(n)) {
-            parms[n] = [];
-        }
-
-        parms[n].push(nv.length === 2 ? v : null);
-    }
-    return parms;
+    return result;
 }
