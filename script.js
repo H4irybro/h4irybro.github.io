@@ -1,9 +1,15 @@
 function Post(name, date, text)
 {
-  //var d = Date();
+  var filt = findGetParameter("filter");
+  if (filt != null)
+  {
+	  if (filt != name) 
+	  {
+		  return;
+	  }
+  }
   document.write("<div class='posts'>");
   document.write("<table><tr><td>");
-  console.log(findGetParameter("fuck"));
   if (name == "kek") { name = "{SUPER_USER} " + name; }
   if (name == "mutt") { name = "{ADMIN} " + name; }
   if (text.split(" ")[0] == "[img]") { text = "<p style='border: solid 1px black;text-align:center;font-size:10px;'>[IMAGE POST]</p><img style='width:200px;width:200px;' src='" + text.split(" ")[1] + "' />"; }
