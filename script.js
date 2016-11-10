@@ -3,6 +3,7 @@ function Post(name, date, text)
   //var d = Date();
   document.write("<div class='posts'>");
   document.write("<table><tr><td>");
+  console.log(parseURLParams(window.location));
   if (name == "kek") { name = "{SUPER_USER} " + name; }
   if (name == "mutt") { name = "{ADMIN} " + name; }
   if (text.split(" ")[0] == "[img]") { text = "<p style='border: solid 1px black;text-align:center;font-size:10px;'>[IMAGE POST]</p><img style='width:200px;width:200px;' src='" + text.split(" ")[1] + "' />"; }
@@ -14,4 +15,29 @@ function Post(name, date, text)
   document.write("</td></tr></table>");
   document.write("</div>");
   console.log("created post by"+ name);
+}
+
+function parseURLParams(url) {
+    var queryStart = url.indexOf("?") + 1,
+        queryEnd   = url.indexOf("#") + 1 || url.length + 1,
+        query = url.slice(queryStart, queryEnd - 1),
+        pairs = query.replace(/\+/g, " ").split("&"),
+        parms = {}, i, n, v, nv;
+
+    if (query === url || query === "") {
+        return;
+    }
+
+    for (i = 0; i < pairs.length; i++) {
+        nv = pairs[i].split("=");
+        n = decodeURIComponent(nv[0]);
+        v = decodeURIComponent(nv[1]);
+
+        if (!parms.hasOwnProperty(n)) {
+            parms[n] = [];
+        }
+
+        parms[n].push(nv.length === 2 ? v : null);
+    }
+    return parms;
 }

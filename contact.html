@@ -3,12 +3,6 @@
 	<head>
 		<title>critiqu.es</title>
 		<link rel="stylesheet" type="text/css" href="stylesheet.css">
-		<script>
-			function mailmemes()
-			{
-				window.location = "mailto:" + document.mail.text;
-			}
-		</script>
 	</head>
 	<body>
 		<table>
@@ -21,9 +15,11 @@
 			</tr>
 		</table>
 		Email: <span style="border: solid 1px black;">coolio803@live.com</span>
+		
+		<h3 style="font-family:arial">Filter system for posts</h3>
 		<form name="mail">
-			<input name="text" type="text"/>
-			<input name="sub" type="submit" value="mail to me!" onclick="mailmemes();" />
+			<input name="user" type="text"/>
+			<input type="submit" />
 		</form>
 	</body>
 </html>
