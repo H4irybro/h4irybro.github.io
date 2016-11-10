@@ -24,7 +24,7 @@ function Post(name, date, text)
   document.write("<span style='font-family:arial;'>" + text + "</span>");
   document.write("</td></tr></table>");
   document.write("</div>");
-  postCount+=postCount;
+  postCount+=1;
   console.log("created post by "+ name +" with id: " + postCount);
 }
 
