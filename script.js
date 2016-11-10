@@ -1,6 +1,9 @@
+var filtering = false;
+
 function Post(name, date, text)
 {
   var filt = findGetParameter("filter");
+  filtering = true;
   if (filt != null)
   {
 	  if (filt != name) 
