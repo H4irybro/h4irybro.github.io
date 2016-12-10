@@ -1,6 +1,27 @@
+html {
+	background-color: #111111;
+	color: #FFFFFF;
+}
+h1, h2, h3, h4, h5, h6 {
+	color: #EEEEEE;
+	font-family: Tahoma, Geneva, sans-serif;
+	text-shadow: 1px 1px #AAA;
+}
+
 h1 {
-	color:black;
-	font-family:arial;
+	font-size:40px;
+}h2 {
+	font-size:35px;
+}h3 {
+	font-size:30px;
+}h4 {
+	font-size:25px;
+}h5 {
+	font-size:20px;
+}h6 {
+	font-size:15px;
+}p {
+	font-size:20px;
 }
 
 .posts {
