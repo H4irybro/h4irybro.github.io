@@ -50,12 +50,12 @@
 				<img id="shekels" />
 				<script>
 					var cnt = 0;
-					var imgs = {
-						"/images/shek1.jpg",
-						"/images/shek2.jpg"
-					};
+					var img1 = "/images/shek1.jpg";
+					var img2 = "/images/shek2.jpg";
 					var img = document.getElementbyId("shekels");
-					img.src = imgs[cnt];
+					setInterval(3000, function() { 
+						img.src = imgs[cnt]
+					});
 				</script>
 			</div>
 		</div>
