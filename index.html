@@ -20,10 +20,12 @@
 				<td><a href="http://critiqu.es/contact"><button id="btn-a">contact</button></a></td>
 				<td><a href="http://critiqu.es/about"><button id="btn-a">about</button></a></td>
 				<td><script>
-				$.getJSON('//freegeoip.net/json/?callback=?', function(data) {
-				  	var d1 = JSON.stringify(data, null, 2);
-				  	document.write("IP: " + d1["ip"]);
-				});
+					$(document).ready( function() {
+						$(this).getJSON('//freegeoip.net/json/?callback=?', function(data) {
+						  	var d1 = JSON.stringify(data, null, 2);
+						  	document.write("IP: " + d1["ip"]);
+						})
+					});
 				</script></td>
 			</tr>
 		</table>
