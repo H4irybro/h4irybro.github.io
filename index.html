@@ -9,13 +9,6 @@
 		      href="favicon.ico">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<script src="script.js"></script>
-		<script>
-		var ip;
-		$.getJSON('//freegeoip.net/json/?callback=?', function(data) {
-		  	var d1 = JSON.stringify(data, null, 2);
-		  	ip = d1["ip"];
-		});
-		</script>
 	</head>
 	<body>
 		<table>
@@ -26,7 +19,12 @@
 				<td><a href="http://critiqu.es/"><button id="btn-a"><strong>home</strong></button></a></td>
 				<td><a href="http://critiqu.es/contact"><button id="btn-a">contact</button></a></td>
 				<td><a href="http://critiqu.es/about"><button id="btn-a">about</button></a></td>
-				<td><script>document.write("IP: " + ip);</script></td>
+				<td><script>
+				$.getJSON('//freegeoip.net/json/?callback=?', function(data) {
+				  	var d1 = JSON.stringify(data, null, 2);
+				  	document.write("IP: " + d1["ip"]);
+				});
+				</script></td>
 			</tr>
 		</table>
 		<div style="border:solid 1px black;padding:5px;">
