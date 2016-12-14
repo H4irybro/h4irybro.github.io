@@ -19,7 +19,11 @@
 
 			$(document).ready( function () {
 				$("#secret").click( function () {
-					var clrs = ["#ff0000","blue","gray"];
+					var clrs = ["red","green","blue",
+								"white", "silver", "gold", 
+								"purple", "black", 
+								"lightgreen", "lightblue", "lightred", "lightpurple", 
+								"darkred", "darkgreen", "darkgreen", "darkpurple"];
 					var rand = clrs[Math.floor(Math.random() * clrs.length)];
 					$("#secret").css("color",rand);
 				} );
