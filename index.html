@@ -13,7 +13,7 @@
 			$(document).ready( function() {
 				$.getJSON('//freegeoip.net/json/?callback=?', function(data) {
 				  	var d1 = JSON.stringify(data, null, 2);
-				  	$("#k").text("IP-> " + d1);
+				  	$("#k").text("IP-> " + d1.split(":")[1].split("\"")[1]);
 				})
 			});
 
@@ -44,7 +44,7 @@
 				<td><a href="http://critiqu.es/"><button id="btn-a"><strong>home</strong></button></a></td>
 				<td><a href="http://critiqu.es/contact"><button id="btn-a">contact</button></a></td>
 				<td><a href="http://critiqu.es/about"><button id="btn-a">about</button></a></td>
-				<td><h4 id="k"></h4></td>
+				<td><h6 id="k"></h4></td>
 			</tr>
 		</table>
 		<div style="border:solid 1px black;padding:5px;">
