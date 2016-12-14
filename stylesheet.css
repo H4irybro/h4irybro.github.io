@@ -42,3 +42,9 @@ padding: 2px;
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
 	background-color: darkslateblue;
 }
+
+#thumb {
+	border-style: solid;
+	border-color: white;
+	border-radius: 100px;
+}
