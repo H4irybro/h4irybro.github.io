@@ -23,6 +23,7 @@ function Post(name, date, text)
   //if ((date.split(".")[0] == d.getDate()) && (date.split(".")[1] == d.getMonth()) && (date.split(".")[2] == d.getFullYear())) { date = "Today"; }
   document.write("<p id='name_date'><strong><span style='border: solid 1px black;'>" + name + "&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;" + date + "</span></strong></p></td></tr></table>");
   document.write("<p><span style='font-family:arial;'>" + text + "</span></p></div>");
+  document.write("<div style='height:10px;'></div>");
   console.log("created post by "+ name +" with id: " + postCount);
 }
 
