@@ -16,13 +16,19 @@
 				  	$("#k").text("IP-> " + d1["ip"]);
 				})
 			});
+
+			$(document).ready( function () {
+				$("#secret").click( function () {
+					$("#secret").css("color", "red");
+				} );
+			} );
 		</script>
 	</head>
 	<body>
 		<table>
 			<tr>
 				<td><img src="/images/vapor.jpg" style="width:40px;height:40px;" /></td>
-				<td><h1>critiques</h1></td>
+				<td><h1 id="secret">critiques</h1></td>
 				<td><div style="width:30px;"></div></td>
 				<td><a href="http://critiqu.es/"><button id="btn-a"><strong>home</strong></button></a></td>
 				<td><a href="http://critiqu.es/contact"><button id="btn-a">contact</button></a></td>
