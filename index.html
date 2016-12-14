@@ -19,7 +19,9 @@
 
 			$(document).ready( function () {
 				$("#secret").click( function () {
-					$("#secret").css("color", "red");
+					var clrs = ["#ff0000","blue","gray"];
+					var rand = clrs[Math.floor(Math.random() * clrs.length)];
+					$("#secret").css("color",rand);
 				} );
 			} );
 		</script>
