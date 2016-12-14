@@ -7,7 +7,13 @@
 		<link rel="icon" 
 		      type="image/x-icon" 
 		      href="favicon.ico">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<script src="script.js"></script>
+		<script>
+		$.getJSON('//freegeoip.net/json/?callback=?', function(data) {
+		  	console.log(JSON.stringify(data, null, 2));
+		});
+		</script>
 	</head>
 	<body>
 		<table>
