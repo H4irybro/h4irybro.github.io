@@ -47,14 +47,12 @@
 			</p>
 			<img src="http://i2.kym-cdn.com/photos/images/original/000/387/557/154.jpg" />
 			<div id="shekels">
-				<img id="shekels" />
 				<script>
 					var cnt = 0;
 					var img1 = "/images/shek1.jpg";
 					var img2 = "/images/shek2.jpg";
-					var img = document.getElementById("shekels");
 					setInterval(3000, function() { 
-						img.src = imgs[cnt]
+						document.write("<img src='" + img1 + "'/>");
 					});
 				</script>
 			</div>
