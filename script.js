@@ -13,8 +13,8 @@ function Post(name, date, text)
 		  return;
 	  }
   }
-  document.write("<div class='posts'>");
-  document.write("<table border='solid 1px black'><tr><td>");
+  document.write("<div class='posts' style='border: solid 1px black'>");
+  document.write("<table><tr><td>");
   if (name == "kek") { name = "{SUPER_USER} " + name; }
   if (name == "mutt") { name = "{ADMIN} " + name; }
   if (text.split(" ")[0] == "[img]") { text = "<div><p style='border: solid 1px black;text-align:center;font-size:10px;'>[IMAGE POST]</p><img style='width:200px;width:200px;' src='" + text.split(" ")[1] + "' /></div>"; }
