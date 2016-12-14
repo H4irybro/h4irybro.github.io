@@ -14,7 +14,7 @@ function Post(name, date, text)
 	  }
   }
   document.write("<div class='posts'>");
-  document.write("<table><tr><td>");
+  document.write("<table border='solid 1px black'><tr><td>");
   if (name == "kek") { name = "{SUPER_USER} " + name; }
   if (name == "mutt") { name = "{ADMIN} " + name; }
   if (text.split(" ")[0] == "[img]") { text = "<div><p style='border: solid 1px black;text-align:center;font-size:10px;'>[IMAGE POST]</p><img style='width:200px;width:200px;' src='" + text.split(" ")[1] + "' /></div>"; }
@@ -23,7 +23,6 @@ function Post(name, date, text)
   //if ((date.split(".")[0] == d.getDate()) && (date.split(".")[1] == d.getMonth()) && (date.split(".")[2] == d.getFullYear())) { date = "Today"; }
   document.write("<p id='name_date'><strong><span style='border: solid 1px black;'>" + name + "&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;" + date + "</span></strong></p></td></tr></table>");
   document.write("<p><span style='font-family:arial;'>" + text + "</span></p></div>");
-  document.write("<div style='height:10px;border: solid 1px black;'></div>");
   console.log("created post by "+ name +" with id: " + postCount);
 }
 
