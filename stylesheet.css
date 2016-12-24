@@ -29,9 +29,9 @@ h1 {
 }
 
 #btn-a {
-	border-style: solid;
+	border-style: inset;
 	border-width: 1px;
-	border-color: white;
+	border-color: gold;
 	border-radius: 0px;
 }
 
