@@ -25,17 +25,14 @@ h1 {
 }
 
 .posts {
-	
-	
-	
-padding: 2px;
+	padding: 2px;
 }
 
 #btn-a {
 	border-style: solid;
 	border-width: 1px;
 	border-color: black;
-	border-radius: 2px;
+	border-radius: 0px;
 }
 
 #name_date {
