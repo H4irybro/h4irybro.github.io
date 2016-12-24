@@ -35,6 +35,10 @@ h1 {
 	border-radius: 0px;
 }
 
+#btn-a:hover {
+	background-color: white;
+}
+
 #name_date {
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
 	background-color: darkslateblue;
