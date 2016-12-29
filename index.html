@@ -37,20 +37,43 @@
 
 			$(document).ready( function () {
 			} );
+
+			function extrapage() {
+				var e = document.getElementById("p");
+				var pg = e.options[e.selectedIndex].value;
+				console.log(pg);
+
+				if (pg != "++ Extra Pages ++") {
+					window.location.href = "http://critiqu.es/" + pg;
+				}
+			}
 		</script>
 	</head>
 	<body>
-		<table>
-			<tr>
-				<td><a href="/"><img id="thumb" src="/images/vapor.jpg" style="width:40px;height:40px;" /></a></td>
-				<td><h1 id="secret">critiques</h1></td>
-				<td><div style="width:30px;"></div></td>
-				<td><a href="http://critiqu.es/"><button id="btn-a"><strong>home</strong></button></a></td>
-				<td><a href="http://critiqu.es/contact"><button id="btn-a">contact</button></a></td>
-				<td><a href="http://critiqu.es/rust"><button id="btn-a">rust</button></a></td>
-				<td><a href="http://critiqu.es/about"><button id="btn-a">about</button></a></td>
-			</tr>
-		</table>
+		<div style="display: inline-block;width:100%;">
+			<table>
+				<tr>
+					<td><a href="/"><img id="thumb" src="/images/vapor.jpg" style="width:40px;height:40px;" /></a></td>
+					<td><h1 id="secret">critiques</h1></td>
+					<td><div style="width:30px;"></div></td>
+					<td><a href="http://critiqu.es/"><button id="btn-a"><strong>home</strong></button></a></td>
+					<td><a href="http://critiqu.es/contact"><button id="btn-a">contact</button></a></td>
+					<td><a href="http://critiqu.es/rust"><button id="btn-a">rust</button></a></td>
+					<td><a href="http://critiqu.es/about"><button id="btn-a">about</button></a></td>
+				</tr>
+			</table>
+				<div style="float:right;">
+								<button id="btn-a" onclick="extrapage();">GO</button>
+				<select id="p" id="btn-a">
+					<option>
+						++ Extra Pages ++
+					</option>
+					<option onclick="window.location='http://critiqu.es/hacks'">
+						hacks
+					</option>
+				</select>
+			</div>
+		</div>
 		<div style="border:solid 1px black;padding:5px;">
 			<h4 style="font-family:Cambria, Georgia, serif">Dank Meme ImageBoard</h4>
 			<script>
@@ -60,7 +83,7 @@
 				}
 			</script>
 			<script>
-			Post("kek",  "14.12.16", "[img] https://media.giphy.com/media/iNZ3Gl6V4lo4M/giphy.gif");
+				Post("kek",  "14.12.16", "[img] https://media.giphy.com/media/iNZ3Gl6V4lo4M/giphy.gif");
 				Post("kek",  "10.11.16", "<strike>Not many posts recently due to new filter system being implemented <a href='/contact'>here</a></strike>");
                 Post("kek",  "8.11.16", "[img] https://pbs.twimg.com/profile_images/681300331746164736/lb1iVkr2.jpg");
                 Post("kek",  "8.11.16", "[YouTube] http://youtube.com/embed/rnPkmozi7Zc");
