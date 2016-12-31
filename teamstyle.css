@@ -43,3 +43,11 @@ h6 {
 	border: solid #DDD 1px;
 	border-radius: 10px;
 }
+
+.stub-email {
+	border: inset silver 1px;
+	background-color: white;
+	width:600px;
+	text-align:left;
+	padding: 5px;
+}
