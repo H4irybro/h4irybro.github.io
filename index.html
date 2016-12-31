@@ -9,13 +9,15 @@
 		      href="favicon.ico">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/userinfo/1.1.0/userinfo.min.js"></script>
 		<script src="script.js"></script>
 		<script>
 			$(document).ready( function() {
-				$.getJSON('//freegeoip.net/json/?callback=?', function(data) {
-				  	var d1 = JSON.stringify(data, null, 2);
-				  	$("#k").text("IP-> " + d1.split(":")[1].split("\"")[1]);
-				})
+				UserInfo.getInfo(function(d1) {
+				 	$("#k").text("IP-> " + d1.split(":")[1].split("\"")[1]);
+				}, function(err) {
+				  	// the "err" object contains useful information in case of an error
+				});
 			});
 
 			$(document).ready( function () {
