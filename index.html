@@ -14,7 +14,8 @@
 		<script>
 			$(document).ready( function() {
 				UserInfo.getInfo(function(d1) {
-					var json = d1, obj = JSON && JSON.parse(json) || $.parseJSON(json);
+					var json = d1;
+					var obj = JSON.parse(json);
 				 	$("#k").text("IP-> " + obj["ip"]);
 				}, function(err) {
 				  	// the "err" object contains useful information in case of an error
