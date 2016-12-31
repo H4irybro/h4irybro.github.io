@@ -12,15 +12,6 @@
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/userinfo/1.1.0/userinfo.min.js"></script>
 		<script src="script.js"></script>
 		<script>
-			$(document).ready( function() {
-				UserInfo.getInfo(function(d1) {
-					var obj = $.parseJSON(d1);
-				 	$("#k").text("IP-> " + obj["ip"]);
-				}, function(err) {
-				  	// the "err" object contains useful information in case of an error
-				});
-			});
-
 			$(document).ready( function () {
 				$("#secret").click( function () {
 					var clrs = ["red","green","blue",
@@ -108,8 +99,6 @@
 		<!-- Extra Content -->
 		<table>
 				<tr>
-					<td><p style="font-size:10px" id="k"></p></td>
-					
 					<td><!-- hitwebcounter Code START -->
 						<a href="http://www.hitwebcounter.com" target="_blank">
 						<img src="http://hitwebcounter.com/counter/counter.php?page=6556624&style=0010&nbdigits=5&type=ip&initCount=0" title="" Alt=""   border="0" >
