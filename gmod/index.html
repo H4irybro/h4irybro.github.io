@@ -2,6 +2,8 @@
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="teamstyle.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="loadinfo.js"></script>
 	</head>
 	<body>
 		<center>
@@ -10,12 +12,42 @@
 			</div>
 			<div class="cont-all">
 				<h5>Rules</h5>
-				<div style="width:25%;text-align:left;">
+				<div style="width:25%;text-align:left; background-color:silver;border: inset 1px #999;padding:10px;">
 					<li>Don't be a cunt</li>
 					<li>Have fun.</li>
 				</div>
-				<p>Note: hacking is completely fine :)</p>
-				<iframe width="1" height="1" src="https://www.youtube.com/embed/fWRISvgAygU?autoplay=1" frameborder="0"></iframe>
+				<small>Note: hacking is completely fine :)</small>
+				<p style="font-size: 20px;">Current music: <strong>Disfigure - Blank VIP (feat. Tara Louise) [NCS Release]</strong></p>
+				<audio autoplay id="music">
+					<source src="music/backgroundm.mp3" type="audio/mpeg">
+				</audio>
+				<script>
+					document.getElementById("music").volume = 0.2;
+				</script>
+				<table>
+					<thead>
+						<th>
+							<td>Map</td>
+						</th>
+						<th>
+							<td>GameMode</td>
+						</th>
+						<th>
+							<td>SteamID</td>
+						</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td id="info-mapname"></td>
+						</tr>
+						<tr>
+							<td id="info-gamemode"></td>
+						</tr>
+						<tr>
+							<td id="info-steamid"></td>
+						</tr>
+					</tbody>
+				</table>
 			</div>
 		</center>
 	</body>
