@@ -1,0 +1,54 @@
+@font-face {
+    font-family: SteamFont;
+    src: url(fonts/steam1.ttf)
+}
+
+body {
+	background-image: url('images/inventvback.jpg');
+}
+
+h1 {
+	font-size: 50px;
+	font-family: SteamFont;
+}
+h2 {
+	font-size: 45px;
+	font-family: SteamFont;
+}
+h3 {
+	font-size: 40px;
+	font-family: SteamFont;
+}
+h4 {
+	font-size: 35px;
+	font-family: SteamFont;
+}
+h5 {
+	font-size: 30px;
+	font-family: SteamFont;
+}
+h6 {
+	font-size: 25px;
+	font-family: SteamFont;
+}
+
+.cont-head {
+	padding: 5px;
+}
+
+.cont-all {
+	width:800px;
+	height: 800px;
+	background-color: #EEE;
+	border: solid #DDD 1px;
+	border-radius: 10px;
+	font-family: SteamFont;
+}
+
+.stub-email {
+	border: inset silver 1px;
+	background-color: white;
+	width:600px;
+	text-align:left;
+	padding: 5px;
+}

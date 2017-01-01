@@ -24,6 +24,7 @@ function Post(name, date, text)
   console.log("created post by "+ name +" with id: " + postCount);
 }
 
+
 function findGetParameter(parameterName) {
     var result = null,
         tmp = [];
