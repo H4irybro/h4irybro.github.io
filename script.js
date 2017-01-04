@@ -35,3 +35,11 @@ function findGetParameter(parameterName) {
     }
     return result;
 }
+
+function s3cr3t__() {
+	var i = document.getElementById("secret");
+	var j = findGetParameter("s3c");
+	if (j != null) {
+		i.innerHTML = "<span style='color=" + j + "'>critiques</span>";
+	}
+}
