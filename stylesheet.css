@@ -1,3 +1,8 @@
+@font-face {
+    font-family: Proggy;
+    src: url(fonts/ProggyCleanCE.ttf)
+}
+
 html {
 	background-color: #111111;
 	color: #FFFFFF;
@@ -22,6 +27,16 @@ h1 {
 	font-size:15px;
 }p {
 	font-size:20px;
+}
+
+#code {
+}
+#code-asm {
+	background-color: white;
+	border: 1px solid grey;
+	
+	font-family: Proggy;
+	color: black;
 }
 
 .posts {

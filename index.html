@@ -79,6 +79,48 @@
 				}
 			</script>
 			<script>
+				PostMore("kek",  "21.1.17", ["<strong>TUTORIAL: How to get register values in Windows C++</strong>",
+											"<div id='code-asm'>",
+													"/*",
+													"COPYRIGHT NOBODY CARES™",
+													"Sauced from http://critiqu.es/",
+													"*/",
+													"int var1 = 0; // eax",
+													"int var2 = 0; // ebx",
+													"int var3 = 0; // ecx",
+													"int var4 = 0; // edx",
+													"",
+													"__asm {",
+													"&nbsp;&nbsp;&nbsp;&nbsp;mov var1, eax",
+													"&nbsp;&nbsp;&nbsp;&nbsp;mov var2, ebx",
+													"&nbsp;&nbsp;&nbsp;&nbsp;mov var3, ecx",
+													"&nbsp;&nbsp;&nbsp;&nbsp;mov var4, edx",
+													"}",
+													"",
+													"printf(\"eax: 0x%p\\n\", var1); // hex of eax",
+													"printf(\"ebx: 0x%p\\n\", var2); // hex of ebx",
+													"printf(\"ecx: 0x%p\\n\", var3); // hex of ecx",
+													"printf(\"edx: 0x%p\\n\", var4); // hex of edx",
+											"</div>",
+											"<div style='font-family:arial;'>",
+												"Okay, let me explain what's going on here:",
+												"<div id='code-asm'>",
+													"__asm {",
+													"&nbsp;&nbsp;&nbsp;&nbsp;mov var1, eax",
+													"&nbsp;&nbsp;&nbsp;&nbsp;mov var2, ebx",
+													"&nbsp;&nbsp;&nbsp;&nbsp;mov var3, ecx",
+													"&nbsp;&nbsp;&nbsp;&nbsp;mov var4, edx",
+													"}",
+												"</div>",
+												"This piece of code (which is x86 Assembly) moves the value of each of 4 of the",
+												"CPU registers into their own separate place in memory, which can then be accessed by the programmer.",
+												"This is a useful code snippet for people that are perhaps making their own Operating System",
+												"and require some kind of diagnostics tool for tracking the cpu.",
+												"",
+												"<em>Example output: </em>",
+												"<img src='images/registers.PNG' />",
+											"</div>"
+											]);
 				Post("kek",  "4.1.17", "[YouTube] https://www.youtube.com/embed/j5DCb1ycXyA");
 				Post("kek",  "4.1.17", "so then my sister was liek<br/><quote><i>why is it called the dark web not the dank web</i></quote><br/>and i was liek <br/><quote><i>what do you think...</i></quote>");
 				Post("kek",  "4.1.17", "[img] YEABOIIIII.jpg");
