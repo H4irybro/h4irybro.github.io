@@ -9,6 +9,9 @@
 		      href="favicon.ico">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<link rel="stylesheet" href="atelier-dune-dark.css">
+		<script src="highlight.pack.js"></script>
+		<script>hljs.initHighlightingOnLoad();</script>
 		<script src="script.js"></script>
 		<script>
 			$(document).ready( function () {
@@ -79,7 +82,7 @@
 			</script>
 			<script>
 				PostMore("kek",  "21.1.17", ["<strong>TUTORIAL: How to get register values in Windows C++</strong>",
-											"<div id='code-asm'>",
+											"<pre><code class='c'>",
 													"/*",
 													"COPYRIGHT NOBODY CARES™",
 													"Sauced from http://critiqu.es/",
@@ -100,17 +103,17 @@
 													"printf(\"ebx: 0x%p\\n\", var2); // hex of ebx",
 													"printf(\"ecx: 0x%p\\n\", var3); // hex of ecx",
 													"printf(\"edx: 0x%p\\n\", var4); // hex of edx",
-											"</div>",
+											"</code></pre>",
 											"<div style='font-family:arial;'>",
 												"Okay, let me explain what's going on here:",
-												"<div id='code-asm'>",
+												"<pre><code class='x86asm'>",
 													"__asm {",
 													"&nbsp;&nbsp;&nbsp;&nbsp;mov var1, eax",
 													"&nbsp;&nbsp;&nbsp;&nbsp;mov var2, ebx",
 													"&nbsp;&nbsp;&nbsp;&nbsp;mov var3, ecx",
 													"&nbsp;&nbsp;&nbsp;&nbsp;mov var4, edx",
 													"}",
-												"</div>",
+												"</code></pre>",
 												"This piece of code (which is x86 Assembly) moves the value of each of 4 of the",
 												"CPU registers into their own separate place in memory, which can then be accessed by the programmer.",
 												"This is a useful code snippet for people that are perhaps making their own Operating System",
