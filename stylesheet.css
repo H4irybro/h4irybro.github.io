@@ -7,10 +7,15 @@ html {
 	background-color: #111111;
 	color: #FFFFFF;
 }
+
+body {
+	background-blend-mode: screen;
+	background-image: url(images/bge.png);
+}
+
 h1, h2, h3, h4, h5, h6 {
 	color: #EEEEEE;
-	font-family: Tahoma, Geneva, sans-serif;
-	text-shadow: 1px 1px #AAA;
+	font-family: sans-serif;
 }
 
 h1 {
@@ -96,4 +101,8 @@ h1 {
 #himg {
 	width:600px;
 	height:400px;
+}
+
+#c {
+	width: 25%;
 }
