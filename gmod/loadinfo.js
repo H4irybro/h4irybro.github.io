@@ -20,10 +20,10 @@
 function GameDetails( servername, serverurl, mapname, maxplayers, steamid, gamemode ) {
 	$("#info-servername").text(servername);
 	$("#info-serverurl").text(servername);
-	$("#info-mapname").text(mapname);
-	$("#info-maxplayers").text(maxplayers);
-	$("#info-steamid").text(steamid);
-	$("#info-gamemode").text(gamemode);
+	$("#info-mapname").text("Map: " + mapname);
+	$("#info-maxplayers").text("Max Players: " + maxplayers);
+	$("#info-steamid").text("SteamID: " + steamid);
+	$("#info-gamemode").text("GameMode: " + gamemode);
 }
 /*
 	Called at the start
