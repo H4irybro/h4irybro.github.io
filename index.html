@@ -50,6 +50,7 @@
 			<table>
 				<tr>
 					<td><a href="/"><img id="thumb" src="/images/vapor.jpg" style="width:40px;height:40px;" /></a></td>
+					<td><div style="width:30px;"></div></td> <!--Spacer-->
 					<td><h1 id="secret">critiques</h1></td>
 					<td><div style="width:30px;"></div></td>
 					<td><a href="http://critiqu.es/"><button id="btn-a"><strong>home</strong></button></a></td>
@@ -75,12 +76,28 @@
 		</div>
 		<div style="border:solid 1px black;padding:5px;">
 			<script>
-				if (filtering == true)//https://www.youtube.com/embed/j5DCb1ycXyA
+				
+				/*if (filtering == true)//https://www.youtube.com/embed/j5DCb1ycXyA
 				{
 					document.write("<p>filtering name</p>");
-				}
+				}*/
+
+				var hidden = true;
+				function hideshow() {
+					if (!hidden) {
+						document.getElementById('hideaway').style.display='none';
+						document.getElementById('btn-hideshow').innerHTML = 'Click to hear the tragedy of  Darth Plagueis the Wise';
+					} else {
+						document.getElementById('hideaway').style.display='block';
+						document.getElementById('btn-hideshow').innerHTML = 'Click to hide the tragedy of Darth Plagueis the Wise';
+					}
+
+					hidden = !hidden;
+				}	
+
 			</script>
 			<script>
+				Post("kek", "24.3.17", "<span id='hideaway' style=\"display:none\">\"Unfortunately, he taught his apprentice everything he knew. Then his apprentice killed him in his sleep. Ironic. He could save others from death, but not himself.\"―Palpatine, to Anakin Skywalker <a href=\"http://starwars.wikia.com/wiki/Star_Wars:_Episode_III_Revenge_of_the_Sith\"><sup>[src]</sup></a></span><button id='btn-hideshow' onclick='hideshow();'>Click to hear the tragedy of  Darth Plagueis the Wise</button>");
 				Post("kek",  "16.3.17", "[img] images/billy.jpg");
 				PostMore("kek",  "21.1.17", ["<strong>TUTORIAL: How to get register values in Windows C++</strong>",
 											"<pre><code id='c' class='c'>",
