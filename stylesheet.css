@@ -60,8 +60,9 @@ h1 {
 }
 
 #name_date {
-	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-family: Verdana;
 	background-color: darkslateblue;
+	text-align: center;
 }
 
 #thumb {
@@ -107,4 +108,17 @@ h1 {
 
 #c {
 	width: 25%;
+}
+
+#tdstuff {
+	vertical-align: top;
+  	text-align: left;
+}
+
+#profile-image {
+	width:200px;
+	height:200px;
+	border-style: solid;
+	border-color: white;
+	border-radius: 100px;
 }
