@@ -34,6 +34,29 @@ h1 {
 	font-size:20px;
 }
 
+a {
+	text-decoration: none;
+	color: lightblue;
+}
+
+button {
+	border-style: inset;
+	border-color: pink;
+	border-width: 1px;
+}
+
+img  {
+	border-style: inset;
+	border-color: pink;
+	border-width: 2px;
+}
+
+select {
+	border-style: inset;
+	border-color: pink;
+	border-width: 1px;
+}
+
 #code {
 }
 #code-asm {
@@ -50,9 +73,8 @@ h1 {
 
 #btn-a {
 	border-style: inset;
+	border-color: pink;
 	border-width: 1px;
-	border-color: gold;
-	border-radius: 0px;
 }
 
 #btn-a:hover {
@@ -61,8 +83,9 @@ h1 {
 
 #name_date {
 	font-family: Verdana;
-	background-color: darkslateblue;
+	background-color: lightpink;
 	text-align: center;
+	color: black;
 }
 
 #thumb {
@@ -119,6 +142,6 @@ h1 {
 	width:200px;
 	height:200px;
 	border-style: solid;
-	border-color: white;
+	border-color: silver;
 	border-radius: 100px;
 }

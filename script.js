@@ -21,9 +21,6 @@ function Post(name, date, text)
 		  return;
 	  }
   }
-  
-  document.write("<div class='posts' style='border: solid 1px black'>");
-  document.write("<table><tr><td id=\"tdstuff\">");
 
   if (text.split(" ")[0] == "[img]") 
     {
@@ -38,7 +35,9 @@ function Post(name, date, text)
       text = "<div><iframe width='560' height='315' src='"+ text.split(" ")[1] + "' frameborder='0'></iframe></div>"; 
     }
 
-  document.write("<div><p id='name_date'>" + name + " @ " + date + "</p><img id=\"profile-image\" src=" + profiles[name] + " /></td>");
+  document.write("<div class='posts' style='border: solid 1px black'>");
+  document.write("<table><tr>");
+  document.write("<td id=\"tdstuff\"><div><img id=\"profile-image\" src=" + profiles[name] + " /><p id='name_date'>" + name + "<br/><span style=\"font-size:10px;\">" + date + "</span></p></td>");
   document.write("<td><div style=\"width:100px;\"></div></div></td>"); // spacer
   document.write("<td><p style=\"font-family:sans-serif;\">" + text + "</p></td></table></div>");
   document.write("<div style=\"height: 35px;\"></div>");
@@ -64,9 +63,6 @@ function PostMore(name, date, textlines) // for code
     text += textlines[i] + "<br>";
   }
 
-  document.write("<div class='posts' style='border: solid 1px black'>");
-  document.write("<table><tr><td id=\"tdstuff\">");
-
   if (text.split(" ")[0] == "[img]") 
     {
       text = "<div><img style='width:20%;width:20%;' src='" + text.split(" ")[1] + "' /></div>"; 
@@ -80,7 +76,9 @@ function PostMore(name, date, textlines) // for code
       text = "<div><iframe width='560' height='315' src='"+ text.split(" ")[1] + "' frameborder='0'></iframe></div>"; 
     }
 
-  document.write("<div><p id='name_date'>" + name + " @ " + date + "</p><img id=\"profile-image\" src=" + profiles[name] + " /></td>");
+  document.write("<div class='posts' style='border: solid 1px black'>");
+  document.write("<table><tr>");
+  document.write("<td id=\"tdstuff\"><div style=\"padding-top: 10px;padding-left: 10px;\"><img id=\"profile-image\" src=" + profiles[name] + " /><p id='name_date'>" + name + "<br/><span style=\"font-size:10px;\">" + date + "</span></p></td>");
   document.write("<td><div style=\"width:100px;\"></div></div></td>"); // spacer
   document.write("<td><p><span style='font-family:arial;'>" + text + "</span></p></td></table></div>");
   document.write("<div style=\"height: 35px;\"></div>");
