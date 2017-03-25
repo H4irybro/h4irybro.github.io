@@ -39,7 +39,7 @@ a {
 	color: lightblue;
 }
 
-button {
+button, code, select, iframe {
 	border-style: inset;
 	border-color: pink;
 	border-width: 1px;
@@ -47,14 +47,8 @@ button {
 
 img  {
 	border-style: inset;
-	border-color: pink;
+	border-color: pink; 
 	border-width: 2px;
-}
-
-select {
-	border-style: inset;
-	border-color: pink;
-	border-width: 1px;
 }
 
 #code {
