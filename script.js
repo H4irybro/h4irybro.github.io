@@ -24,7 +24,7 @@ function Post(name, date, text)
 
   if (text.split(" ")[0] == "[img]") 
     {
-      text = "<div><img style='width:20%;width:20%;' src='" + text.split(" ")[1] + "' /></div>"; 
+      text = "<div><img style='width:30%;width:30%;' src='" + text.split(" ")[1] + "' /></div>"; 
     }
   if (text.split(" ")[0] == "[link]") 
     { 
@@ -65,7 +65,7 @@ function PostMore(name, date, textlines) // for code
 
   if (text.split(" ")[0] == "[img]") 
     {
-      text = "<div><img style='width:20%;width:20%;' src='" + text.split(" ")[1] + "' /></div>"; 
+      text = "<div><img style='width:30%;width:30%;' src='" + text.split(" ")[1] + "' /></div>"; 
     }
   if (text.split(" ")[0] == "[link]") 
     { 
