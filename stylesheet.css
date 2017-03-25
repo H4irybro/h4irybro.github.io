@@ -75,6 +75,10 @@ img  {
 	background-color: white;
 }
 
+#btns:hover {
+	font-size: 20px;
+}
+
 #name_date {
 	font-family: Verdana;
 	background-color: lightpink;
