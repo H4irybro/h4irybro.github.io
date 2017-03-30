@@ -2,21 +2,11 @@ var filtering = false;
 var postCount = 0;
 
 var profiles = {
-  "kek":  {
-	  "pic": "user_profiles\\kek.jpg"
-  },
-  "mutt": {
-	  "pic": "user_profiles\\mutt.jpg"
-  },
-  "paddy": {
-	   "pic": "user_profiles\\paddy.jpg"
-  },
-  "forehead": {
-	   "pic": "https://pbs.twimg.com/profile_images/655713281789841409/Rm3mwNNQ_400x400.jpg"
-  },
-  "weedson": {
-	   "pic": "https://scontent-lhr3-1.xx.fbcdn.net/v/t1.0-0/p526x296/15349758_129114567577209_2825970834131460331_n.jpg?oh=4539b1e4694cb44e5532750a9924436d&oe=595ED0AA"
-  }
+  "kek": "user_profiles\\kek.jpg",
+  "mutt": "user_profiles\\mutt.jpg",
+  "paddy": "user_profiles\\paddy.jpg",
+  "forehead": "https://pbs.twimg.com/profile_images/655713281789841409/Rm3mwNNQ_400x400.jpg",
+  "weedson": "https://scontent-lhr3-1.xx.fbcdn.net/v/t1.0-0/p526x296/15349758_129114567577209_2825970834131460331_n.jpg?oh=4539b1e4694cb44e5532750a9924436d&oe=595ED0AA",
 };
 
 function Post(name, date, text)
@@ -90,7 +80,7 @@ function PostMore(name, date, textlines) // for code
 
   document.write("<div class='posts' style='border: solid 1px black'>");
   document.write("<table><tr>");
-  document.write("<td id=\"tdstuff\"><div style=\"padding-top: 10px;padding-left: 10px;\"><img id=\"profile-image\" src=" + profiles[name]["pic"] + " /><p id='name_date'>" + name + "<br/><span style=\"font-size:10px;\">" + date + "</span></p></td>");
+  document.write("<td id=\"tdstuff\"><div style=\"padding-top: 10px;padding-left: 10px;\"><img id=\"profile-image\" src=" + profiles[name] + " /><p id='name_date'>" + name + "<br/><span style=\"font-size:10px;\">" + date + "</span></p></td>");
   document.write("<td><div style=\"width:100px;\"></div></div></td>"); // spacer
   document.write("<td><p><span style='font-family:arial;'>" + text + "</span></p></td></table></div>");
   document.write("<div style=\"height: 35px;\"></div>");
