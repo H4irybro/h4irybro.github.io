@@ -6,6 +6,14 @@
       var type = 0;
       
       function calc_num(i) {
+        if (i == 101) {
+          document.getElementById("calc-text").innerHTML += "+";
+        } else if (i == 102) {
+          document.getElementById("calc-text").innerHTML += "-";
+        } else if (i == 103) {
+          document.getElementById("calc-text").innerHTML += "*";
+        }
+        
         document.getElementById("calc-text").innerHTML += "" + i;
       }
       
@@ -37,7 +45,12 @@
           <tr>
             <td><button onclick="calc_num(7)">7</button></td>
             <td><button onclick="calc_num(8)">8</button></td>
-            <td><button onclick="calc_num(9)">9</button></td
+            <td><button onclick="calc_num(9)">9</button></td>
+          </tr>
+          <tr>
+            <td><button onclick="calc_num(101)">+</button></td>
+            <td><button onclick="calc_num(102)">-</button></td>
+            <td><button onclick="calc_num(103)">*</button></td>
           </tr>
         </table>
       </div>
