@@ -2,21 +2,21 @@ var filtering = false;
 var postCount = 0;
 
 var profiles = {
-  "kek":  [
+  "kek":  {
 	  "pic": "user_profiles\\kek.jpg"
-  ],
-  "mutt": [
+  },
+  "mutt": {
 	  "pic": "user_profiles\\mutt.jpg"
-  ],
-  "paddy":[
+  },
+  "paddy": {
 	   "pic": "user_profiles\\paddy.jpg"
-  ],
-  "forehead": [
+  },
+  "forehead": {
 	   "pic": "https://pbs.twimg.com/profile_images/655713281789841409/Rm3mwNNQ_400x400.jpg"
-  ],
-  "weedson": [
+  },
+  "weedson": {
 	   "pic": "https://scontent-lhr3-1.xx.fbcdn.net/v/t1.0-0/p526x296/15349758_129114567577209_2825970834131460331_n.jpg?oh=4539b1e4694cb44e5532750a9924436d&oe=595ED0AA"
-  ]
+  }
 };
 
 function Post(name, date, text)
