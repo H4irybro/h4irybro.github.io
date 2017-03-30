@@ -2,9 +2,33 @@
 <html>
   <head>
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <script>
+      var type = 0;
+      
+      function calc_num(i) {
+        document.getElementById("calc-text").innerHTML += "" + i;
+      }
+      
+      function calc() {
+        
+      }
+    </script>
   </head>
   <body>
     <h1>errr.....</h1>
     <h2>..Patrick lives here or something like that.</h2>
+    
+    <div id="calc">
+      <div id="calc-screen">
+        <p id="calc-text"></p>
+      </div>
+      <div id="calc-buttons">
+        <table>
+          <tr>
+            <button onclick="calc_num(0)"></button>
+          </tr>
+        </table>
+      </div>
+    </div>
   </body>
 </html>
