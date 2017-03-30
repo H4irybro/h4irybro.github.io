@@ -4,21 +4,33 @@
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
     <script>
       var type = 0;
+      var all = {};
       
       function calc_num(i) {
         if (i == 101) {
-          document.getElementById("calc-text").innerHTML += "+";
+          all += document.getElementById("calc-text").innerHTML;
+          document.getElementById("calc-text").innerHTML = "+";
         } else if (i == 102) {
-          document.getElementById("calc-text").innerHTML += "-";
+          all += document.getElementById("calc-text").innerHTML;
+          document.getElementById("calc-text").innerHTML = "-";
         } else if (i == 103) {
-          document.getElementById("calc-text").innerHTML += "*";
+          all += document.getElementById("calc-text").innerHTML;
+          document.getElementById("calc-text").innerHTML = "*";
         } else {
           document.getElementById("calc-text").innerHTML += "" + i;
         }
       }
       
       function calc() {
-        
+        var out = 0;
+        for (var str in all) {
+          if (str.split("")[0] == "+") {
+            var temp = str.substring(1);
+            temp = parseInt(temp);
+            out += temp;
+          }
+        }
+        document.getElementById("calc-text").innerHTML = "" + out;
       }
     </script>
     <style>
@@ -61,7 +73,7 @@
             <td><button id="calc-app-button" onclick="calc_num(101)">+</button></td>
             <td><button id="calc-app-button" onclick="calc_num(102)">-</button></td>
             <td><button id="calc-app-button" onclick="calc_num(103)">*</button></td>
-            <td><button id="calc-app-button" onclick="calc_num(103)">=</button></td>
+            <td><button id="calc-app-button" onclick="calc()">=</button></td>
           </tr>
         </table>
       </div>
