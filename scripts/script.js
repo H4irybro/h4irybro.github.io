@@ -9,6 +9,15 @@ var profiles = {
   "weedson": "https://scontent-lhr3-1.xx.fbcdn.net/v/t1.0-0/p526x296/15349758_129114567577209_2825970834131460331_n.jpg?oh=4539b1e4694cb44e5532750a9924436d&oe=595ED0AA",
 };
 
+function LoadF(url, callback) {
+  var client = new XMLHttpRequest();
+  client.open('GET', url);
+  client.onreadystatechange = function() {
+    callback(client.responseText);
+  }
+  client.send();
+}
+
 function Post(name, date, text)
 {
   postCount+=1;
@@ -86,6 +95,11 @@ function PostMore(name, date, textlines) // for code
   document.write("<div style=\"height: 35px;\"></div>");
 }
 
+function PostFile(name, date, filename) {
+  var text;
+  LoadF(filename, function (str) { text = str; } );
+  Post(name, date, text);
+}
 
 
 function findGetParameter(parameterName) {

@@ -2,48 +2,18 @@
 <html>
 	<head>
 		<title>critiqu.es</title>
-		<link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+		<link rel="stylesheet" type="text/css" href="style/stylesheet.css">
+		<link rel="stylesheet" type="text/css" href="style/atelier-dune-dark.css">
+
 		<link rel='shortcut icon' href='favicon.ico' type='image/x-icon'>
-		<link rel="icon" 
-		      type="image/x-icon" 
-		      href="favicon.ico">
+		<link rel="icon" type="image/x-icon" href="favicon.ico">
+
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-		<link rel="stylesheet" href="atelier-dune-dark.css">
-		<script src="highlight.pack.js"></script>
-		<script>hljs.initHighlightingOnLoad();</script>
-		<script src="script.js"></script>
-		<script>
-			$(document).ready( function () {
-				$("#secret").click( function () {
-					var clrs = ["red","green","blue",
-								"white", "silver", "gold", 
-								"purple", "black", 
-								"lightgreen", "lightblue", "lightred", "lightpurple", 
-								"darkred", "darkgreen", "darkgreen", "darkpurple"];
-					var rand = clrs[Math.floor(Math.random() * clrs.length)];
-					$("#secret").css("color",rand);
-				} );
-			} );
-
-			$(document).ready( function() {
-				$("#secret").fadeOut("slow");
-				$("#secret").fadeIn("slow");
-			} );
-
-			$(document).ready( function () {
-			} );
-
-			function extrapage() {
-				var e = document.getElementById("p");
-				var pg = e.options[e.selectedIndex].value;
-				console.log(pg);
-
-				if (pg != "++ Extra Pages ++") {
-					window.location.href = "http://critiqu.es/" + pg;
-				}
-			}
-		</script>
+		<script src="scripts/highlight.pack.js"></script>
+		<script src="scripts/script.js"></script>
+		<script src="scripts/homepage.js"></script>
 	</head>
 	<body onload="s3cr3t__()">
 		<div style="display: inline-block;width:100%;">
@@ -104,51 +74,52 @@
 			<script>
 				Post("paddy", "24.3.17", "<span id='hideaway' style=\"display:none\">\"Unfortunately, he taught his apprentice everything he knew. Then his apprentice killed him in his sleep. Ironic. He could save others from death, but not himself.\"<br/>―Palpatine, to Anakin Skywalker <a href=\"http://starwars.wikia.com/wiki/Star_Wars:_Episode_III_Revenge_of_the_Sith\"><sup>[src]</sup></a></span><button id='btn-hideshow' onclick='hideshow();'>Click to hear the tragedy of  Darth Plagueis the Wise</button>");
 				Post("forehead",  "16.3.17", "[img] images/billy.jpg");
-				PostMore("kek",  "21.1.17", ["<strong>TUTORIAL: How to get register values in Windows C++</strong>",
-											"<pre><code id='c' class='c'>",
-													"/*",
-													"COPYRIGHT NOBODY CARES™",
-													"Sauced from http://critiqu.es/",
-													"*/",
-													"int var1 = 0; // eax",
-													"int var2 = 0; // ebx",
-													"int var3 = 0; // ecx",
-													"int var4 = 0; // edx",
-													"",
-													"__asm {",
-													"&nbsp;&nbsp;&nbsp;&nbsp;mov var1, eax",
-													"&nbsp;&nbsp;&nbsp;&nbsp;mov var2, ebx",
-													"&nbsp;&nbsp;&nbsp;&nbsp;mov var3, ecx",
-													"&nbsp;&nbsp;&nbsp;&nbsp;mov var4, edx",
-													"}",
-													"",
-													"printf(\"eax: 0x%p\\n\", var1); // hex of eax",
-													"printf(\"ebx: 0x%p\\n\", var2); // hex of ebx",
-													"printf(\"ecx: 0x%p\\n\", var3); // hex of ecx",
-													"printf(\"edx: 0x%p\\n\", var4); // hex of edx",
-											"</code></pre>",
-											"<div style='font-family:arial;'>",
-												"Okay, let me explain what's going on here:",
-												"<pre><code class='x86asm' id='c'>",
-													"__asm {",
-													"&nbsp;&nbsp;&nbsp;&nbsp;mov var1, eax",
-													"&nbsp;&nbsp;&nbsp;&nbsp;mov var2, ebx",
-													"&nbsp;&nbsp;&nbsp;&nbsp;mov var3, ecx",
-													"&nbsp;&nbsp;&nbsp;&nbsp;mov var4, edx",
-													"}",
-												"</code></pre>",
-												"This piece of code (which is x86 Assembly) moves the value of each of 4 of the",
-												"CPU registers into their own separate place in memory, which can then be accessed by the programmer.",
-												"This is a useful code snippet for people that are perhaps making their own Operating System",
-												"and require some kind of diagnostics tool for tracking the cpu.",
-												"",
-												"<em>Example output: </em>",
-												"<img src='images/registers.PNG' />",
-											"</div>"
-											]);
+				PostMore("kek",  "21.1.17", [
+				"<strong>TUTORIAL: How to get register values in Windows C++</strong>",
+					"<pre><code id='c' class='c'>",
+						"/*",
+						"COPYRIGHT NOBODY CARES™",
+						"Sauced from http://critiqu.es/",
+						"*/",
+						"int var1 = 0; // eax",
+						"int var2 = 0; // ebx",
+						"int var3 = 0; // ecx",
+						"int var4 = 0; // edx",
+						"",
+						"__asm {",
+						"&nbsp;&nbsp;&nbsp;&nbsp;mov var1, eax",
+						"&nbsp;&nbsp;&nbsp;&nbsp;mov var2, ebx",
+						"&nbsp;&nbsp;&nbsp;&nbsp;mov var3, ecx",
+						"&nbsp;&nbsp;&nbsp;&nbsp;mov var4, edx",
+						"}",
+						"",
+						"printf(\"eax: 0x%p\\n\", var1); // hex of eax",
+						"printf(\"ebx: 0x%p\\n\", var2); // hex of ebx",
+						"printf(\"ecx: 0x%p\\n\", var3); // hex of ecx",
+						"printf(\"edx: 0x%p\\n\", var4); // hex of edx",
+					"</code></pre>",
+					"<div style='font-family:arial;'>",
+						"Okay, let me explain what's going on here:",
+						"<pre><code class='x86asm' id='c'>",
+							"__asm {",
+							"&nbsp;&nbsp;&nbsp;&nbsp;mov var1, eax",
+							"&nbsp;&nbsp;&nbsp;&nbsp;mov var2, ebx",
+							"&nbsp;&nbsp;&nbsp;&nbsp;mov var3, ecx",
+							"&nbsp;&nbsp;&nbsp;&nbsp;mov var4, edx",
+							"}",
+						"</code></pre>",
+						"This piece of code (which is x86 Assembly) moves the value of each of 4 of the",
+						"CPU registers into their own separate place in memory, which can then be accessed by the programmer.",
+						"This is a useful code snippet for people that are perhaps making their own Operating System",
+						"and require some kind of diagnostics tool for tracking the cpu.",
+						"",
+						"<em>Example output: </em>",
+						"<img src='images/registers.PNG' />",
+					"</div>"
+				]);
 				Post("kek",  "4.1.17", "[YouTube] https://www.youtube.com/embed/j5DCb1ycXyA");
 				Post("kek",  "4.1.17", "so then my sister was liek<br/><quote><i>why is it called the dark web not the dank web</i></quote><br/>and i was liek <br/><quote><i>what do you think...</i></quote>");
-				Post("weedson",  "4.1.17", "[img] YEABOIIIII.jpg");
+				Post("weedson",  "4.1.17", "[img] images/YEABOIIIII.jpg");
 				Post("kek",  "29.12.16", "As the new year aproaches I decided to release a Minecraft hack, for mc1.10<br/>Head on over to <a href='http://critiqu.es/hacks'>hacks</a> to download");
 				Post("kek",  "14.12.16", "[img] https://media.giphy.com/media/iNZ3Gl6V4lo4M/giphy.gif");
 				Post("kek",  "10.11.16", "<strike>Not many posts recently due to new filter system being implemented <a href='/contact'>here</a></strike>");
