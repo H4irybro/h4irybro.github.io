@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<style>
+		body {
+			background-image: url("images\\background2.jpg");
+		}
+		.clicker {
+			color: white;
+			font-family: Arial;
+		}
+		#case1 {
+			width: 248;
+			height: 192;
+		}
+		</style>
+
+		<script>
+			var prices = {
+				"chrom_case": "1.50",
+				"gamma_case": "1.50",
+				"bravo_case": "2.00",
+			};
+
+			var chrom_items = {
+				"XM1014 | Quicksilver": "0.10",
+				"SCAR-20 | Grotto": "0.10",
+				"M249 | System Lock": "0.15",
+				"MP9 | Deadly Poison": "0.35",
+				"Glock-18 | Catacombs": "0.27",
+				"Dual Berettas | Urban Shock": "0.70",
+				"Sawed-Off | Serenity": "0.70",
+				"MAC-10 | Malachite": "0.70",
+				"Desert Eagle | Naga": "1.50",
+				"P250 | Muertos": "3.50",
+				"AK-47 | Cartel": "6.20",
+				"M4A4 | 龍王 (Dragon King)": "9.00",
+				"AWP | Man-o'-war": "7.00",
+				"Galil AR | Chatterbox": "10.00"
+			};
+
+			var bal = 0.00;
+			var case_id = 0;
+			
+			function SetBal(i) {
+				bal = i;
+
+				if (Number.isInteger(i)) {
+					document.getElementById("c-bal").innerHTML = "$"+i+".00";
+				} else {
+					document.getElementById("c-bal").innerHTML = "$"+i;
+				}
+			}
+
+			function GetBal() {
+				return bal;
+			}
+
+			function SetCase(id) {
+				case_id = id;
+				if (id == 1) {
+					document.getElementById("case1").src = "images\\Chroma_Weapon_Case.png";
+				}
+				if (id == 2) {
+					document.getElementById("case1").src = "images\\Gamma_Case.png";
+				}
+				if (id == 3) {
+					document.getElementById("case1").src = "images\\Bravo_Case.png";
+				}
+			}
+
+			function CanAfford (price) { return GetBal() >= price }
+			function CreateErr (text) { document.getElementById("c-err").innerHTML = text; }
+
+			function OpenCase() {
+				if (GetBal() > 0.00) {
+					if (case_id == 1) {
+						if (CanAfford(parseFloat(prices["chrom_case"]))) {
+							SetBal(GetBal() - parseFloat(prices["chrom_case"]));
+							console.log(Math.floor((Math.random() * chrom_items.length) + 1));
+						} else {
+							CreateErr("Insufficient funds!");
+						}
+					}
+					else if (case_id == 2) {
+						if (CanAfford(parseFloat(prices["gamma_case"]))) {
+							SetBal(GetBal() - parseFloat(prices["gamma_case"]));
+						} else {
+							CreateErr("Insufficient funds!");
+						}
+					}
+					else if (case_id == 3) {
+						if (CanAfford(parseFloat(prices["bravo_case"]))) {
+							SetBal(GetBal() - parseFloat(prices["bravo_case"]));
+
+						} else {
+							CreateErr("Insufficient funds!");
+						}
+					}
+				} else {
+					CreateErr("Insufficient funds!");
+				}
+			}
+
+			$(document).ready(function() {
+				SetBal(10.00);
+				SetCase(1);
+			});
+		</script>
+	</head>
+	<body>
+		<div class="clicker">
+			<h1>Case Opener</h1>
+			<table>
+				<tr>
+					<td>
+						<p id="c-bal"></p>
+						<button onclick="SetCase(1);">Chroma Case</button><br/>
+						<button onclick="SetCase(2);">Gamma Case </button><br/>
+						<button onclick="SetCase(3);">Bravo Case </button>
+						<p id="c-err" style="color:red;"></p>
+					</td>
+					<td>
+						<div id="cases">
+							<img id="case1" src="" onclick="OpenCase()" />
+						</div>
+					</td>
+				</tr>
+			</table>		
+		</div>
+	</body>
+</html>
