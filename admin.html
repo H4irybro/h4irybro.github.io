@@ -1,23 +1,18 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 		<script src="cookie.js"></script>
-	</head>
-	<body>
-	<input type="text" id="pass" />
-	<button onclick="CheckPass()">Proceed</button>
-	<script>
-		var sitecode = "<h1>Welcome back, Luke</h1>";
+		<script>
 
-		function load(url, callback) {
-		  	var xhr = new XMLHttpRequest();
-		  	xhr.onreadystatechange = function () {
-		    	if (xhr.readyState === 4 && xhr.status === 200) callback(xhr.responseText);
-		  	};
-		  	xhr.open("GET", url, true);
-		}
-		load("http://critiqu.es/admin_hidden.page", function (contents) {
-		  	sitecode = contents;
+		var sitecode = "<h1>Unable to download page, sorry.</h1>";
+		
+		$(document).ready(function () {
+			load("admin_hidden.page", function (contents) {
+			  	sitecode = contents;
+			  	console.log(contents)
+			});
 		});
 
 		function CheckPass() {
@@ -25,11 +20,14 @@
 			var pass = document.getElementById("pass").value;
 	        if (pass == "critiques_admin") {
 	            document.write(sitecode);
-	            return;
 	        } else {
 	        	document.location = "";
 	        }
 		}
 	</script>
+	</head>
+	<body>
+	<input type="text" id="pass" />
+	<button onclick="CheckPass()">Proceed</button>
 	</body>
 </html>

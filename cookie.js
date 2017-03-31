@@ -22,3 +22,12 @@ function getCookie(cname) {
     }
     return "";
 }
+
+function load(url, callback) {
+  	var client = new XMLHttpRequest();
+  	client.open('GET', url);
+  	client.onreadystatechange = function() {
+  		callback(client.responseText);
+	}
+	client.send();
+}
